@@ -1,0 +1,16 @@
+{
+  "name": "logo-doctor",
+  "description": "The logo-doctor skill: measured, professional logo reviews with clear fixes, made locally.",
+  "owner": {
+    "name": "Ali Raza"
+  },
+  "plugins": [
+    {
+      "name": "logo-doctor",
+      "source": "./",
+      "description": "Review a logo like a senior identity designer, with measurements, annotated images, a report and a fix brief.",
+      "version": "1.0.0",
+      "category": "design"
+    }
+  ]
+}

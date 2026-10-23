@@ -1,0 +1,191 @@
+{
+  "file": "demo-fixed.svg",
+  "units": "units",
+  "size": [
+    719.88,
+    840.0
+  ],
+  "colours": [
+    "#1d5e74"
+  ],
+  "checks": [
+    {
+      "key": "grid",
+      "title": "Construction grid",
+      "status": "Pass",
+      "summary": "every key position sits on a grid of 20 units",
+      "image": "01-grid.png",
+      "fixes": [],
+      "consider": [],
+      "data": {
+        "module": 20,
+        "off": 0,
+        "positions": 33
+      }
+    },
+    {
+      "key": "alignment",
+      "title": "Alignment",
+      "status": "Pass",
+      "summary": "no near misses between edges, centres and corners",
+      "image": "01-grid.png",
+      "fixes": [],
+      "consider": [],
+      "data": {
+        "misses": 0
+      }
+    },
+    {
+      "key": "strokes",
+      "title": "Stroke weights",
+      "status": "Pass",
+      "summary": "consistent: 40.0 (100% of the stroke length)",
+      "image": "02-strokes.png",
+      "fixes": [],
+      "consider": [
+        "Horizontal parts (40.0) are as heavy as vertical ones (40.0). Horizontals look heavier than verticals of the same width; type designers often draw them 5 to 10% lighter. Optional for a geometric monoline mark."
+      ],
+      "data": {
+        "tiers": [
+          39.97
+        ],
+        "main": 39.97036717506384
+      }
+    },
+    {
+      "key": "gaps",
+      "title": "Gaps and spacing",
+      "status": "Pass",
+      "summary": "even: the usual gap is 40.0 units",
+      "image": "03-gaps.png",
+      "fixes": [],
+      "consider": [],
+      "data": {
+        "usual": 39.973697121901125,
+        "uneven": 0,
+        "tight": 0
+      }
+    },
+    {
+      "key": "circles",
+      "title": "Circles and curves",
+      "status": "Pass",
+      "summary": "circles match and shared centres are exact",
+      "image": "04-circles.png",
+      "fixes": [],
+      "consider": [],
+      "data": {
+        "rings": 2,
+        "mismatched": 0,
+        "near_concentric": 0
+      }
+    },
+    {
+      "key": "angles",
+      "title": "Angles",
+      "status": "Pass",
+      "summary": "every straight edge is on the angle system (0 (18), 135 (4))",
+      "image": "05-angles.png",
+      "fixes": [],
+      "consider": [],
+      "data": {
+        "off": 0,
+        "system": {
+          "0": 18,
+          "135": 4
+        }
+      }
+    },
+    {
+      "key": "symmetry",
+      "title": "Symmetry",
+      "status": "Pass",
+      "summary": "exactly symmetric (turn by 180 degrees)",
+      "image": "06-symmetry.png",
+      "fixes": [],
+      "consider": [],
+      "data": {
+        "best": "turn by 180 degrees",
+        "verdict": "symmetric"
+      }
+    },
+    {
+      "key": "balance",
+      "title": "Balance",
+      "status": "Pass",
+      "summary": "the visual weight is centred",
+      "image": "07-balance.png",
+      "fixes": [],
+      "consider": [],
+      "data": {
+        "dx": 7.607078272419738e-05,
+        "dy": -1.3660804571762648e-05
+      }
+    },
+    {
+      "key": "sizes",
+      "title": "Small sizes",
+      "status": "Check",
+      "summary": "Gaps fill in below about 21 px tall, so the 16 to 32 px favicon sizes blur",
+      "image": "08-sizes.png",
+      "fixes": [],
+      "consider": [
+        "Gaps fill in below about 21 px tall, so the 16 to 32 px favicon sizes blur. For favicons and small avatars, consider a simplified version with fewer, wider gaps."
+      ],
+      "data": {
+        "closes_below_px": 21.095491893774696
+      }
+    },
+    {
+      "key": "colour",
+      "title": "Colour on backgrounds",
+      "status": "Check",
+      "summary": "weak on mid grey, dark grey, near-black",
+      "image": "09-colour-backgrounds.png",
+      "fixes": [],
+      "consider": [
+        "#1d5e74 is weak on dark grey, near-black. For dark backgrounds, a lighter version with the same hue, #65a3bb, gives dark grey 4.6:1, near-black 6.9:1. Use it only with the owner's agreement; the one-colour white or black version is the other option.",
+        "On mid tones (mid grey) no version of the colour is strong. Use the one-colour white or black version there, or keep the logo off mid-tone and busy photo areas."
+      ],
+      "data": {
+        "weak_on": [
+          "mid grey",
+          "dark grey",
+          "near-black"
+        ],
+        "suggestions": [
+          "#65a3bb"
+        ]
+      }
+    },
+    {
+      "key": "vision",
+      "title": "Colour vision and greyscale",
+      "status": "Pass",
+      "summary": "readable with common colour vision deficiencies",
+      "image": "10-colour-vision.png",
+      "fixes": [],
+      "consider": [],
+      "data": {
+        "merges": 0
+      }
+    },
+    {
+      "key": "complexity",
+      "title": "Complexity",
+      "status": "Info",
+      "summary": "3 parts, 2 enclosed counters, 23 straight edges, 17 arcs",
+      "image": null,
+      "fixes": [],
+      "consider": [],
+      "data": {
+        "parts": 3,
+        "holes": 2,
+        "lines": 23,
+        "arcs": 17,
+        "rings": 2,
+        "edge_index": 23.39139498040084
+      }
+    }
+  ]
+}

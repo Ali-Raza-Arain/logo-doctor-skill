@@ -1,0 +1,215 @@
+{
+  "file": "demo-draft.svg",
+  "units": "units",
+  "size": [
+    727.8125000000001,
+    856.2500000000001
+  ],
+  "colours": [
+    "#1d5e74"
+  ],
+  "checks": [
+    {
+      "key": "grid",
+      "title": "Construction grid",
+      "status": "Fix",
+      "summary": "11 of 32 key positions off the grid of 20 units",
+      "image": "01-grid.png",
+      "fixes": [
+        "The horizontal stroke between y = 158.0 and 202.0 is 44.0 wide; its centre line is on the grid, so correcting its weight puts both edges on the grid.",
+        "The horizontal stroke between y = 478.1 and 522.0 is 44.0 wide; its centre line is on the grid, so correcting its weight puts both edges on the grid.",
+        "The horizontal stroke between y = 798.0 and 842.0 is 44.0 wide; its centre line is on the grid, so correcting its weight puts both edges on the grid.",
+        "The horizontal stroke between y = 896.0 and 936.0 sits 4.0 units off the grid: move it +4.0 units.",
+        "Move the corner at x = 617.8 to 620 (+2.2 units).",
+        "Move the arc centre at x = 726.0 to 720 (-6.0 units).",
+        "Move the arc centre at y = 668.0 to 660 (-8.0 units)."
+      ],
+      "consider": [],
+      "data": {
+        "module": 20,
+        "off": 11,
+        "positions": 32
+      }
+    },
+    {
+      "key": "alignment",
+      "title": "Alignment",
+      "status": "Pass",
+      "summary": "1 near miss, already covered by the grid fixes",
+      "image": "01-grid.png",
+      "fixes": [],
+      "consider": [],
+      "data": {
+        "misses": 0
+      }
+    },
+    {
+      "key": "strokes",
+      "title": "Stroke weights",
+      "status": "Fix",
+      "summary": "2 weights where one is intended: 40.0 and 44.0",
+      "image": "02-strokes.png",
+      "fixes": [
+        "Two weights 40.0 and 44.0 differ by 10%: too little to read as a decision. Set the strokes at 44.0 (near 499.7, 500.7; near 257.5, 819.1) to 40.0, or make the difference at least 15 to 20%."
+      ],
+      "consider": [
+        "Horizontal parts (40.0) are as heavy as vertical ones (40.0). Horizontals look heavier than verticals of the same width; type designers often draw them 5 to 10% lighter. Optional for a geometric monoline mark."
+      ],
+      "data": {
+        "tiers": [
+          39.96,
+          43.97
+        ],
+        "main": 39.96143182744978
+      }
+    },
+    {
+      "key": "gaps",
+      "title": "Gaps and spacing",
+      "status": "Fix",
+      "summary": "1 uneven gap",
+      "image": "03-gaps.png",
+      "fixes": [
+        "The gap near 560.0, 569.3 changes from 37.9 to 54.0 units. Make the facing edges parallel; where they are arcs, give them one centre."
+      ],
+      "consider": [],
+      "data": {
+        "usual": 37.95771129397803,
+        "uneven": 1,
+        "tight": 0
+      }
+    },
+    {
+      "key": "circles",
+      "title": "Circles and curves",
+      "status": "Fix",
+      "summary": "1 set of circles that should match, 1 centre just off its partner",
+      "image": "04-circles.png",
+      "fixes": [
+        "Circles that are meant to match differ: 22.0/61.9 at 726.0, 180.0; 19.0/63.9 at 280.0, 820.0. Give them all one size.",
+        "Arcs centred at 600.0, 668.0 sit 8.0 units from the centre 600.0, 660.0 of the arcs next to them. Make them concentric, keeping the radii that give equal gaps."
+      ],
+      "consider": [
+        "Radii 220.0 and 228.0 (centres 400.0, 340.0 and 600.0, 668.0) differ by a hair: equal by intent?",
+        "Radii 259.9 and 268.0 (centres 400.0, 340.0 and 600.0, 668.0) differ by a hair: equal by intent?"
+      ],
+      "data": {
+        "rings": 2,
+        "mismatched": 1,
+        "near_concentric": 1
+      }
+    },
+    {
+      "key": "angles",
+      "title": "Angles",
+      "status": "Fix",
+      "summary": "1 edge a few degrees off the 45 degree system",
+      "image": "05-angles.png",
+      "fixes": [
+        "Set the edge at 639.8, 99.8 to exactly 135 degrees (now 138.0)."
+      ],
+      "consider": [],
+      "data": {
+        "off": 1,
+        "system": {
+          "0": 18,
+          "135": 4
+        }
+      }
+    },
+    {
+      "key": "symmetry",
+      "title": "Symmetry",
+      "status": "Fix",
+      "summary": "almost symmetric (turn by 180 degrees), but parts differ by up to 16.0 units",
+      "image": "06-symmetry.png",
+      "fixes": [
+        "The mark is almost symmetric (turn by 180 degrees); the red and blue areas break it. Fix the items above first and review again; if a difference remains, rebuild one half from the other, or make the difference large enough to read as intended."
+      ],
+      "consider": [],
+      "data": {
+        "best": "turn by 180 degrees",
+        "verdict": "nearly",
+        "max_dev": 15.99607007400568
+      }
+    },
+    {
+      "key": "balance",
+      "title": "Balance",
+      "status": "Pass",
+      "summary": "the visual weight is centred",
+      "image": "07-balance.png",
+      "fixes": [],
+      "consider": [],
+      "data": {
+        "dx": -0.003663005637405639,
+        "dy": 0.005126799855043648
+      }
+    },
+    {
+      "key": "sizes",
+      "title": "Small sizes",
+      "status": "Check",
+      "summary": "Gaps fill in below about 23 px tall, so the 16 to 32 px favicon sizes blur",
+      "image": "08-sizes.png",
+      "fixes": [],
+      "consider": [
+        "Gaps fill in below about 23 px tall, so the 16 to 32 px favicon sizes blur. For favicons and small avatars, consider a simplified version with fewer, wider gaps."
+      ],
+      "data": {
+        "closes_below_px": 22.61752276657815
+      }
+    },
+    {
+      "key": "colour",
+      "title": "Colour on backgrounds",
+      "status": "Check",
+      "summary": "weak on mid grey, dark grey, near-black",
+      "image": "09-colour-backgrounds.png",
+      "fixes": [],
+      "consider": [
+        "#1d5e74 is weak on dark grey, near-black. For dark backgrounds, a lighter version with the same hue, #65a3bb, gives dark grey 4.6:1, near-black 6.9:1. Use it only with the owner's agreement; the one-colour white or black version is the other option.",
+        "On mid tones (mid grey) no version of the colour is strong. Use the one-colour white or black version there, or keep the logo off mid-tone and busy photo areas."
+      ],
+      "data": {
+        "weak_on": [
+          "mid grey",
+          "dark grey",
+          "near-black"
+        ],
+        "suggestions": [
+          "#65a3bb"
+        ]
+      }
+    },
+    {
+      "key": "vision",
+      "title": "Colour vision and greyscale",
+      "status": "Pass",
+      "summary": "readable with common colour vision deficiencies",
+      "image": "10-colour-vision.png",
+      "fixes": [],
+      "consider": [],
+      "data": {
+        "merges": 0
+      }
+    },
+    {
+      "key": "complexity",
+      "title": "Complexity",
+      "status": "Info",
+      "summary": "3 parts, 2 enclosed counters, 23 straight edges, 23 arcs",
+      "image": null,
+      "fixes": [],
+      "consider": [],
+      "data": {
+        "parts": 3,
+        "holes": 2,
+        "lines": 23,
+        "arcs": 23,
+        "rings": 2,
+        "edge_index": 22.992934788780097
+      }
+    }
+  ]
+}

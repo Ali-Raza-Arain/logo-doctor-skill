@@ -1,0 +1,13 @@
+{
+  "name": "logo-doctor",
+  "version": "1.0.0",
+  "description": "Review a logo like a senior identity designer: measure grid, stroke weights, gaps, curves, angles, symmetry, small sizes and colour, with annotated images, a prioritised report and a fix brief. Runs locally.",
+  "author": {
+    "name": "Ali Raza",
+    "url": "https://github.com/ali-raza-arain"
+  },
+  "homepage": "https://github.com/ali-raza-arain/logo-doctor-skill",
+  "repository": "https://github.com/ali-raza-arain/logo-doctor-skill",
+  "license": "MIT",
+  "keywords": ["logo", "design-review", "brand", "svg", "grid", "colour", "accessibility"]
+}
